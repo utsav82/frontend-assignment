@@ -423,31 +423,6 @@ p[data-width="wide"] {
   border-radius: 0.5rem;
 }
 
-.second{
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap:2rem;
-}
-.syllabus{
-  width: 100%;
-  border: 1px solid #ebf0f5;
-  padding: 1.5rem;
-  padding-left:2rem;
-  padding-right:2rem;
-  border-radius: 0.5rem;
-}
-.syllabus-wise-analysis{
-
-  color: var(--primary-text, #1e272e);
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.75rem; /* 175% */
-  letter-spacing: -0.02rem;
-}
-
 
 .graph_description {
   margin: 2rem 0;
@@ -519,6 +494,31 @@ p[data-width="wide"] {
   transform: translate(-50%, -50%);
   font-size: 36px;
 }
+.second{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+.syllabus{
+  width: 100%;
+  border: 1px solid #ebf0f5;
+  padding: 1.5rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  border-radius: 0.5rem;
+}
+.syllabus-wise-analysis{
+
+  color: var(--primary-text, #1e272e);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem; /* 175% */
+  letter-spacing: -0.02rem;
+}
+
 
 .info{
   justify-content: space-between;
