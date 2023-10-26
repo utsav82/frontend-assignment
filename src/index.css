@@ -45,7 +45,6 @@
   }
 }
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -83,7 +82,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
 img,
 picture,
 svg {
@@ -91,7 +89,6 @@ svg {
   display: block;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -286,7 +283,7 @@ p[data-width="wide"] {
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.75rem; /* 175% */
+  line-height: 1.75rem;
   letter-spacing: -0.02rem;
 }
 .nav-item:hover{
@@ -366,7 +363,7 @@ p[data-width="wide"] {
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.75rem; /* 175% */
+  line-height: 1.75rem; 
   letter-spacing: -0.02rem;
 }
 
@@ -429,7 +426,7 @@ p[data-width="wide"] {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 1.3125rem */
+  line-height: 150%; 
   letter-spacing: -0.0175rem;
 }
 
@@ -454,7 +451,7 @@ p[data-width="wide"] {
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.75rem; /* 175% */
+  line-height: 1.75rem; 
   letter-spacing: -0.02rem;
 }
 
@@ -476,7 +473,7 @@ p[data-width="wide"] {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 1.3125rem */
+  line-height: 150%; 
   letter-spacing: -0.0175rem;
 }
 
@@ -516,7 +513,7 @@ p[data-width="wide"] {
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.75rem; /* 175% */
+  line-height: 1.75rem; 
   letter-spacing: -0.02rem;
 }
 
@@ -577,7 +574,6 @@ letter-spacing: -0.32px;
   height: 4px;
   height: 0.5rem;
   margin-top:10px;
-  /* align-items: center; */
   background-color: #c7d6ed;
   overflow: hidden;
   border-radius: 20px;

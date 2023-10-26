@@ -1,5 +1,5 @@
 import Chart from 'chart.js/auto';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Chartt = ({percentile}) => {
   const chartRef = useRef(null);
@@ -28,12 +28,12 @@ const Chartt = ({percentile}) => {
           x: {
             display: true,
             ticks: {
-              max: 100, // Set the maximum value for the x-axis
-              min: 0, // Set the minimum value for the x-axis
+              max: 100, 
+              min: 0, 
             },
           },
           y: {
-            display: false, // Hide the y-axis labels
+            display: false,
           },
         },
         plugins: {

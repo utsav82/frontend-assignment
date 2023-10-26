@@ -10,8 +10,8 @@ const ScorePieChart = ({currentScore}) => {
             labels: ['Score', 'Remaining'],
             datasets: [
                 {
-                    data: [currentScore, 15-currentScore], // Score out of 15
-                    backgroundColor: ['#438AF6', 'lightgray'], // Specify the color for the score
+                    data: [currentScore, 15-currentScore],
+                    backgroundColor: ['#438AF6', 'lightgray'],
                 },
             ],
         };
@@ -22,7 +22,7 @@ const ScorePieChart = ({currentScore}) => {
             options: {
                 plugins: {
                     legend: {
-                        display: false, // Hide the legend if not needed
+                        display: false,
                     },
                 },
             },
