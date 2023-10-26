@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Modal from './Modal'
 import Update from './Update';
 import Header from './Header';
@@ -7,8 +7,8 @@ function App() {
 
   const [update, setUpdate] = useState(false);
   const [rank, setRank] = useState(12890);
-  const [percentile, setPercentile] = useState("37%");
-  const [currentScore, setCurrentScore] = useState("07/15");
+  const [percentile, setPercentile] = useState(37);
+  const [currentScore, setCurrentScore] = useState(7);
 
   return (
     <div className="App">
@@ -56,7 +56,7 @@ function App() {
                   📋
                   </span>
                   <span>
-                    <div className="statistic-value">{percentile}</div>
+                    <div className="statistic-value">{percentile}%</div>
                     <div className="statistic-title">PERCENTILE</div>
                   </span>
                 </div>
@@ -65,7 +65,7 @@ function App() {
                 <div className="statistic">
                   <span className="symbol">✅</span>
                   <span>
-                    <div className="statistic-value">{currentScore}</div>
+                    <div className="statistic-value">{currentScore<10?'0':''}{currentScore}/15</div>
                     <div className="statistic-title">CORRECT ANSWERS</div>
                   </span>
                 </div>
@@ -77,7 +77,7 @@ function App() {
 
 
             <div className="comparison">
-              Compaurson
+              Comparison
             </div>
 
 

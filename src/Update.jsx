@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import  { useState } from "react";
+import './Update.css';
 export default function Update({
   setRank,
   setPercentile,
@@ -15,61 +15,74 @@ export default function Update({
     setFormData({ ...formData, [name]: value });
   };
   const handleSave = () => {
+    if(!formData.rank || formData.rank<=0)
+    {
+      if(formData.rank)
+      alert("Enter valid rank");
+      else alert("Enter your Rank");
+    }
+    else if( !formData.percentile || formData.percentile<0 || formData.percentile>100)
+    {
+      if(formData.percentile)
+      alert("Enter percentile between 0 and 100");
+      else alert("Enter your percentile");
+    }
+    else if(!formData.currentScore || formData.currentScore<0 || formData.currentScore>15)
+    {
+      if(formData.currentScore)
+      alert("Enter valid current score (0-15)");
+      else alert("Enter your score");
+    }
+    else{
     setRank(formData.rank);
     setPercentile(formData.percentile);
     setCurrentScore(formData.currentScore);
     setUpdate(false);
+    }
   };
   return (
     <div className="modal">
-      <div className="modal-header">
-        <h2>Update Scores</h2>
-      
-      </div>
-      <form>
-        <div className="modal-entry">
-          <label htmlFor="rank">Rank:</label>
-          <input
-            type="text"
-            id="rank"
-            name="rank"
-            value={formData.rank}
-            onChange={handleInputChange}
-          />
+      <form onSubmit={handleSave}>
+        <div className="modal-header">
+          <div className="Heading">Update Scores</div>
+          <div className="html-logo"><img alt="#" height="60rem" src="../html.png"></img></div>
         </div>
-        <div className="modal-entry">
-          <label htmlFor="percentile">Percentile:</label>
-          <input
-            type="text"
-            id="percentile"
-            name="percentile"
-            value={formData.percentile}
-            onChange={handleInputChange}
-          />
+        <hr />
+        <div className="form-entry">
+          <ol className="custom-counter">
+            <li>
+              <label htmlFor="rank">Update your <b>rank</b></label>
+              <input type="number" id="rank" name="rank" value={formData.rank} onChange={handleInputChange}
+              />
+            </li>
+            <li >
+              <label htmlFor="percentile">Update your <b>percentile</b></label>
+              <input type="number" id="percentile" name="percentile" value={formData.percentile} onChange={handleInputChange}
+              />
+            </li>
+            <li>
+              <label htmlFor="currentScore">Update your <b>current score (out of 15) </b></label>
+              <input type="number" id="currentScore" name="currentScore" value={formData.currentScore} onChange={handleInputChange}
+              />
+            </li>
+          </ol>
         </div>
-        <div className="modal-entry">
-          <label htmlFor="currentScore">Current Score (out of 15):</label>
-          <input
-            type="text"
-            id="currentScore"
-            name="currentScore"
-            value={formData.currentScore}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="modal-buttons">
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              setUpdate(false);
-            }}
-          >
-            Cancel
-          </button>
-          <button type="button" onClick={handleSave}>
-            Save
-          </button>
+        <hr/>
+        <div className="footer">
+          <div className="modal-buttons">
+            <button className="cancel"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setUpdate(false);
+              }}
+            >
+              Cancel
+            </button>
+            <button className="submit" type="button" onClick={handleSave}>
+              Save -&gt;
+            </button>
+          </div>
         </div>
       </form>
     </div>
