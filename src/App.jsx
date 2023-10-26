@@ -126,10 +126,7 @@ function App() {
           </div>
 
           <div className="second">
-
-
             <div className="syllabus">
-
               <div className="syllabus-wise-analysis">
                 Syllabus wise Analysis
               </div>
@@ -138,40 +135,44 @@ function App() {
                 <div className="topic">
                   <div>HTML Tools, Forms, History</div>
                   <div className="info">
-                    <span>A</span>
-                    <span className="light-blue">80%</span>
+                    <div className="loader-container-blue">
+                      <span className="loader-blue"></span>
+                    </div>
+                    <span className="color light-blue">80%</span>
                   </div>
                 </div>
 
                 <div className="topic">
                   <div>Tags & References in HTML</div>
                   <div className="info">
-                    <span>B</span>
-                    <span className="orange">60%</span>
+                    <div className="loader-container-orange">
+                      <span className="loader-orange"></span>
+                    </div>
+                    <span className="color orange">60%</span>
                   </div>
                 </div>
 
                 <div className="topic">
                   <div>Tables & CSS Basics</div>
                   <div className="info">
-                    <span>C</span>
-                    <span className="pink">24%</span>
+                    <div className="loader-container-pink">
+                      <span className="loader-pink"></span>
+                    </div>
+                    <span className="color pink">24%</span>
                   </div>
                 </div>
 
                 <div className="topic">
                   <div>Tables & CSS Basics</div>
                   <div className="info">
-                    <span>D</span>
-                    <span className="green">96%</span>
+                    <div className="loader-container-green">
+                      <span className="loader-green"></span>
+                    </div>
+                    <span className="color green">96%</span>
                   </div>
                 </div>
-
-                
               </div>
             </div>
-
-
 
             <div className="question">
               <div className="question-analysis">

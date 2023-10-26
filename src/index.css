@@ -59,13 +59,12 @@
   font: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
 
-/* Set core root defaults */
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -75,13 +74,11 @@ body {
   height: 100%;
 }
 
-/* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -442,7 +439,7 @@ p[data-width="wide"] {
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 0.5rem;
-  margin:1rem;  
+  margin:2rem;  
 }
 .question-analysis
 {
@@ -495,7 +492,7 @@ p[data-width="wide"] {
   font-size: 36px;
 }
 .second{
-  width: 30%;
+  width: 35%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -505,9 +502,10 @@ p[data-width="wide"] {
   width: 100%;
   border: 1px solid #ebf0f5;
   padding: 1.5rem;
-  padding-left:2rem;
-  padding-right:2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-radius: 0.5rem;
+  margin:2.8rem 2rem;  
 }
 .syllabus-wise-analysis{
 
@@ -521,16 +519,126 @@ p[data-width="wide"] {
 
 
 .info{
+  display: flex;
   justify-content: space-between;
 }
-.topic{
-  width: 12rem;
-  height: 3.125rem;
-  flex-shrink: 0;
-  border-radius: 0rem 6.25rem 6.25rem 0rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
+.color{
+  float: right;
 }
+.topic{
+  width: 100%;
+  height: 4.2rem;
+  border-radius: 0rem 6.25rem 6.25rem 0rem;
+  margin: 1rem 0rem ;
+  align-items: center;
+}
+.pink{
+  color:#FB5E5E;
+  font-style: normal;
+  font-size: large;
+font-weight: 700;
+letter-spacing: -0.32px;
+}
+.orange{
+  color: #FF9142;
+font-style: normal;
+font-size: large;
+font-weight: 700;
+letter-spacing: -0.32px;
+}
+.light-blue{
+color: #438AF6;
+font-size: large;
+font-style: normal;
+font-weight: 700;
+letter-spacing: -0.32px;
+}
+.green{
+  color: #2EC971;
+  font-style: normal;
+  font-size: large;
+font-weight: 700;
+letter-spacing: -0.32px;
+}
+.loader-blue{
+  width: 80%;
+  /* align-items: center; */
+  /* bottom: 0; */
+  height: 100%;
+  background-color: #438AF6;
+  display: block;
+  animation: lineLoaderb ease-out 2s 1;
+}
+.loader-container-blue{
+  width: 12rem;
+  height: 4px;
+  height: 0.5rem;
+  margin-top:10px;
+  /* align-items: center; */
+  background-color: #c7d6ed;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.loader-orange{
+  width: 60%;
+  height: 100%;
+  background-color: #FF9142;
+  display: block;
+  animation: lineLoaderb ease-out 2s 1;
+  /* animation-timing-function: ease; */
+}
+.loader-container-orange{
+  width: 12rem;
+  height: 4px;
+  height: 0.5rem;
+  margin-top:10px;
+  background-color: #fae6d8;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.loader-pink{
+  width: 24%;
+  height: 100%;
+  background-color: #FB5E5E;
+  display: block;
+  animation: lineLoaderb ease-out 2s 1;
+}
+.loader-container-pink{
+  width: 12rem;
+  height: 4px;
+  background-color: #fddbdb;
+  height: 0.5rem;
+  margin-top:10px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.loader-green{
+  width: 96%;
+  height: 100%;
+  background-color: #2EC971;
+  display: block;
+  animation: lineLoaderb ease-out 2s 1;
+}
+.loader-container-green{
+width: 12rem;
+  height: 4px;
+  height: 0.5rem;
+  margin-top:10px;
+  background-color: #ceffe3;
+  overflow: hidden;
+  border-radius: 20px;
+}
+@keyframes lineLoaderb{
+  0%{
+    width: 0%;
+  }
+  25%{
+      width: 50%;
+  }
+  50%{
+      width: 75%;
+  }
+  80%{
+      width: 80%;
+  }
+ };
