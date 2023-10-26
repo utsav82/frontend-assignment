@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
-const ScorePieChart = () => {
+const ScorePieChart = ({currentScore}) => {
     const chartRef = useRef(null);
     const chartInstance = useRef(null);
 
@@ -10,7 +10,7 @@ const ScorePieChart = () => {
             labels: ['Score', 'Remaining'],
             datasets: [
                 {
-                    data: [10, 5], // Score out of 15
+                    data: [currentScore, 15-currentScore], // Score out of 15
                     backgroundColor: ['#438AF6', 'lightgray'], // Specify the color for the score
                 },
             ],
@@ -42,7 +42,7 @@ const ScorePieChart = () => {
                 chartInstance.current.destroy();
             }
         };
-    }, []);
+    }, [currentScore]);
 
     return (
         <div className="chart-container">

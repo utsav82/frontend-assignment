@@ -107,7 +107,7 @@ function App() {
             <div className="comparison" style={{ position: "relative" }}>
               <div className="comparsion-graph">Comparison Graph</div>
               <div className="graph_description">
-                You scored 37% percentile which is lower than the average
+                You scored {percentile}% percentile which is lower than the average
                 percentile 72% of all the engineers who took this assessment
               </div>
               <span
@@ -121,7 +121,7 @@ function App() {
               >
                 📈
               </span>
-              <Chart />
+              <Chart percentile={percentile}/>
             </div>
           </div>
 
@@ -187,7 +187,7 @@ function App() {
                 still needs some improvements
               </div>
 
-              <ScorePieChart />
+              <ScorePieChart currentScore={currentScore} />
             </div>
           </div>
         </main>

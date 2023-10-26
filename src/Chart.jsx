@@ -1,7 +1,7 @@
 import Chart from 'chart.js/auto';
 import React, { useEffect, useRef } from 'react';
 
-const Chartt = () => {
+const Chartt = ({percentile}) => {
   const chartRef = useRef(null);
   const chartInstance = useRef(null);
 
@@ -11,7 +11,7 @@ const Chartt = () => {
       datasets: [
         {
           label: 'Percentile Comparison',
-          data: [50, 20, 37, 40, 25, 72, 40, 15], 
+          data: [50, 20, percentile , 40, 25, 72, 40, 15], 
           borderColor: 'rgba(52, 152, 219, 1)', 
           backgroundColor: 'rgba(52, 152, 219, 0.2)',
           fill: true,
@@ -61,7 +61,7 @@ const Chartt = () => {
         chartInstance.current.destroy();
       }
     };
-  }, []);
+  }, [percentile]);
 
   return (
     <div>
