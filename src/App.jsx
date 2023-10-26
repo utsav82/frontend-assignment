@@ -3,6 +3,8 @@ import Modal from './Modal'
 import Update from './Update';
 import Header from './Header';
 import Sidenav from './Sidenav';
+import Chart from './Chart';
+import ScorePieChart from './ScorePieChart';
 function App() {
 
   const [update, setUpdate] = useState(false);
@@ -53,7 +55,7 @@ function App() {
 
                 <div className="statistic">
                   <span className="symbol">
-                  📋
+                    📋
                   </span>
                   <span>
                     <div className="statistic-value">{percentile}%</div>
@@ -65,28 +67,44 @@ function App() {
                 <div className="statistic">
                   <span className="symbol">✅</span>
                   <span>
-                    <div className="statistic-value">{currentScore<10?'0':''}{currentScore}/15</div>
+                    <div className="statistic-value">{currentScore < 10 ? '0' : ''}{currentScore}/15</div>
                     <div className="statistic-title">CORRECT ANSWERS</div>
                   </span>
                 </div>
-
-
               </div>
             </div>
 
 
 
-            <div className="comparison">
-              Comparison
+            <div className="comparison" style={{ position: 'relative' }}>
+              <div className="comparsion-graph">Comparison Graph</div>
+              <div className="graph_description">You scored 37% percentile which is lower than the
+                average percentile 72% of all the engineers who took this assessment</div>
+              <span className="symbol" style={{ position: "absolute", top: '0', right: '0', margin: '1rem' }}>
+                📈
+              </span>
+              <Chart />
             </div>
-
-
           </div>
 
           <div className="second">
 
             <div className="syllabus">syllabus</div>
-            <div className="question">question</div>
+
+            
+            <div className="question">
+              <div className="question-analysis">
+                <div className="question-analysis-title">Question Analysis</div>
+                <div className="question-analysis-score">{currentScore < 10 ? '0' : ''}{currentScore}/15</div>
+              </div>
+              <div className="question-analysis-description">
+                You scored {currentScore} question correct out of 15. However it
+                still needs some improvements
+              </div>
+
+              <ScorePieChart />
+
+            </div>
 
           </div>
 

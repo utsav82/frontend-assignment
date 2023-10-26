@@ -357,8 +357,8 @@ p[data-width="wide"] {
   width: 100%;
   border: 1px solid #ebf0f5;
   padding: 1.5rem;
-  padding-left:2rem;
-  padding-right:2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-radius: 0.5rem;
 }
 
@@ -381,7 +381,6 @@ p[data-width="wide"] {
   display: flex;
   align-items: center;
   gap: 1rem;
-
 }
 
 .statistic-title {
@@ -404,15 +403,102 @@ p[data-width="wide"] {
   letter-spacing: -0.0275rem;
 }
 
-.symbol
-{
+.symbol {
   font-size: 1.375rem;
   height: 3rem;
   width: 3rem;
-  background-image: url( 'ellipse.png' );
+  background-image: url("ellipse.png");
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.comparison {
+  width: 100%;
+  border: 1px solid #ebf0f5;
+  padding: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
+}
+
+.comparsion-graph {
+  color: var(--primary-text, #1e272e);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem; /* 175% */
+  letter-spacing: -0.02rem;
+}
+
+.graph_description {
+  margin: 2rem 0;
+  color: #566474;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 1.3125rem */
+  letter-spacing: -0.0175rem;
+}
+
+.question
+{
+  width: 100%;
+  border: 1px solid #ebf0f5;
+  padding: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
+  margin:1rem;  
+}
+.question-analysis
+{
+  display: flex;
+  justify-content: space-between;
+}
+.question-analysis-title
+{
+  color: var(--primary-text, #1e272e);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem; /* 175% */
+  letter-spacing: -0.02rem;
+}
+
+.question-analysis-score
+{
+  color: #438AF6;
+
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.02rem;
+}
+
+.question-analysis-description
+{
+  margin: 1rem 0;
+  color: #566474;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 1.3125rem */
+  letter-spacing: -0.0175rem;
+}
+
+.chart-container {
+  position: relative;
+  width: 60%;
+  margin-left: 100px;
+}
+
+.centered-emoji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
 }
